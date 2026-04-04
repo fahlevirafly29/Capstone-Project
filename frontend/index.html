@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Prediction App</title>
+    <meta name="description" content="AI-powered job prediction based on your profile — powered by machine learning.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon">🎯</span>
+                <span class="logo-text">JobPredict <span class="logo-badge">AI</span></span>
+            </div>
+            <div id="connectionStatus" class="connection-status checking">
+                <span class="status-dot"></span>
+                <span class="status-label">Checking...</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Hero -->
+        <section class="hero">
+            <h1 class="hero-title">Discover Your <span class="gradient-text">Ideal Career</span></h1>
+            <p class="hero-subtitle">Enter your profile and let AI predict the best job role for you.</p>
+        </section>
+
+        <!-- Prediction Form -->
+        <section class="section">
+            <div class="card form-card">
+                <div class="card-header">
+                    <h2 class="card-title">📋 Your Profile</h2>
+                    <span class="dummy-badge">⚡ Dummy Mode</span>
+                </div>
+
+                <form id="predictionForm">
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" placeholder="e.g. 25" min="16" max="65" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="years_experience">Years of Experience</label>
+                            <input type="number" id="years_experience" placeholder="e.g. 3" min="0" max="50" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="education_level">Education Level</label>
+                            <select id="education_level">
+                                <option value="high_school">High School</option>
+                                <option value="bachelor" selected>Bachelor</option>
+                                <option value="master">Master</option>
+                                <option value="phd">PhD</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="major">Major / Field of Study</label>
+                            <input type="text" id="major" placeholder="e.g. computer science">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="skill_score">Skill Score (0–100)</label>
+                            <div class="range-wrapper">
+                                <input type="range" id="skill_score_slider" min="0" max="100" value="70"
+                                    oninput="syncSkillScore(this.value)">
+                                <input type="number" id="skill_score" step="0.1" min="0" max="100" value="70"
+                                    oninput="syncSkillSlider(this.value)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn-primary">
+                        <span class="btn-text">🔍 Predict My Job</span>
+                        <span class="btn-loader hidden">⏳ Predicting...</span>
+                    </button>
+
+                </form>
+
+                <!-- Result -->
+                <div id="resultBox" class="result-box hidden">
+                    <div class="result-label">Predicted Job Role</div>
+                    <div id="output" class="result-value">—</div>
+                    <div id="resultNote" class="result-note"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Dummy Data Table -->
+        <section class="section">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">📊 Sample Data (Dummy)</h2>
+                    <button id="loadSamplesBtn" class="btn-secondary" onclick="loadSamples()">Load Samples</button>
+                </div>
+                <p class="card-description">Data dummy ini diambil langsung dari backend untuk memverifikasi koneksi FE-BE.</p>
+
+                <div id="samplesContainer">
+                    <div class="empty-state">
+                        <span class="empty-icon">🗄️</span>
+                        <p>Klik <strong>Load Samples</strong> untuk mengambil data dari backend.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>JobPredict AI &copy; 2025 — Capstone Project &nbsp;|&nbsp; 
+           Backend: <code>http://localhost:5000/api</code></p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
