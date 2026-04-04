@@ -1,0 +1,82 @@
+[
+    {
+        "age": 27,
+        "years_experience": 8,
+        "education_level": "master",
+        "major": "computer science",
+        "skill_score": 89.5,
+        "predicted_job": "Software Engineer"
+    },
+    {
+        "age": 30,
+        "years_experience": 8,
+        "education_level": "bachelor",
+        "major": "business",
+        "skill_score": 44.4,
+        "predicted_job": "Business Analyst"
+    },
+    {
+        "age": 22,
+        "years_experience": 1,
+        "education_level": "bachelor",
+        "major": "graphic design",
+        "skill_score": 72.1,
+        "predicted_job": "UI/UX Designer"
+    },
+    {
+        "age": 35,
+        "years_experience": 12,
+        "education_level": "master",
+        "major": "finance",
+        "skill_score": 91.3,
+        "predicted_job": "Financial Analyst"
+    },
+    {
+        "age": 28,
+        "years_experience": 5,
+        "education_level": "bachelor",
+        "major": "information technology",
+        "skill_score": 78.6,
+        "predicted_job": "Data Analyst"
+    },
+    {
+        "age": 40,
+        "years_experience": 15,
+        "education_level": "phd",
+        "major": "machine learning",
+        "skill_score": 97.2,
+        "predicted_job": "Data Scientist"
+    },
+    {
+        "age": 25,
+        "years_experience": 3,
+        "education_level": "bachelor",
+        "major": "marketing",
+        "skill_score": 55.8,
+        "predicted_job": "Digital Marketer"
+    },
+    {
+        "age": 32,
+        "years_experience": 9,
+        "education_level": "master",
+        "major": "cybersecurity",
+        "skill_score": 85.0,
+        "predicted_job": "Security Engineer"
+    },
+    {
+        "age": 29,
+        "years_experience": 6,
+        "education_level": "bachelor",
+        "major": "computer science",
+        "skill_score": 82.4,
+        "predicted_job": "Backend Developer"
+    },
+    {
+        "age": 24,
+        "years_experience": 2,
+        "education_level": "high_school",
+        "major": "arts",
+        "skill_score": 60.0,
+        "predicted_job": "Content Creator"
+    }
+]
